@@ -1,6 +1,6 @@
 import "./current-weather.css";
 
-const currentWeather = ({ data }) => {
+const CurrentWeather = ({ data }) => {
   return (
     <div className="weather">
       <div className="top">
@@ -22,7 +22,10 @@ const currentWeather = ({ data }) => {
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Feels like</span>
-            <span className="parameter-value"> {Math.round(data.main.feels_like)}°C</span>
+            <span className="parameter-value">
+              {" "}
+              {Math.round(data.main.feels_like)}°C
+            </span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Wind</span>
@@ -41,4 +44,4 @@ const currentWeather = ({ data }) => {
     </div>
   );
 };
-export default currentWeather;
+export default CurrentWeather;

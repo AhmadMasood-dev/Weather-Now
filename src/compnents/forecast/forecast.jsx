@@ -1,4 +1,5 @@
 import React from "react";
+import { WEEK_DAYS } from "../../data/index";
 import {
   Accordion,
   AccordionItem,
@@ -7,16 +8,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import "../forecast/forecast.css";
-// import {AccordionItemButton} from "react-accessible-accordion/dist/types/components/AccordionItemButton";
-const WEEK_DAYS = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
+
 const Forecast = ({ data }) => {
   const dayInAWeek = new Date().getDay();
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
